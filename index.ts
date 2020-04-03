@@ -69,7 +69,7 @@ const readme: (appName: string) => Promise<string> = async (appName: string) => 
 
 This project is bootstrapped by [Create Elvis App][1].
 
-Find the most recent version of this guide at [here][2]. And check out [Elvis.js repo][3] for the most up-to-date info.
+Find the most recent version of this guide at [here][2]. And check out [Elvis.js][3] for the most up-to-date info.
 
 
 ## Available Scripts
@@ -99,8 +99,8 @@ See the section in Elvis docs about deployment for more information.
 Don\\\`t Think Twice, it\\\`s Alright.
 
 [1]: https://github.com/clearloop/elvis.js/tree/master/packages/create-elvis-app
-[2]: https://clearloop.github.io/elvis
-[3]: https://github.com/clearloop/elvis
+[2]: https://elvisjs.github.io/the-elvis-book
+[3]: https://github.com/elvisjs/calling-elvis
 `.slice(1);
 
 enum Logger {
@@ -211,7 +211,7 @@ function install(
             env: { ...process.env, ADBLOCK: "1", DISABLE_OPENCOLLECTIVE: "1" },
         })
 
-        child.on("close", (code) => {
+        child.on("close", (code: number) => {
             if (code !== 0) {
                 log(chalk.red(`${command} ${args.join(" ")}`), Logger.Error);
                 reject({ command: `${command} ${args.join(' ')}` });

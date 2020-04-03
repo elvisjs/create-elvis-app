@@ -40,4 +40,4 @@ $ yarn create elvis-app
 ```
 
 
-[1]: https://github.com/clearloop/elvis.js
+[1]: https://github.com/elvisjs/create-elvis-app
